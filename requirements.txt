@@ -16,3 +16,4 @@ torch==2.5.1
 torchvision==0.20.1
 typing_extensions==4.12.2
 Werkzeug==2.2.0
+gunicorn==23.0.0
