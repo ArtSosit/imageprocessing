@@ -273,5 +273,5 @@ tie_transform = transforms.Compose([
 ])
 
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 5000))  # อ่านพอร์ตจากตัวแปรแวดล้อม หรือใช้ 5000 ถ้าไม่มีการตั้งค่า
+    port = int(os.environ.get("PORT", 10000))  # อ่านพอร์ตจากตัวแปรแวดล้อม หรือใช้ 5000 ถ้าไม่มีการตั้งค่า
     app.run(host="0.0.0.0", port=port, debug=True)
