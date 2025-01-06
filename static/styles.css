@@ -1,0 +1,218 @@
+body {
+  font-family: "tahoma", sans-serif;
+  background: linear-gradient(to bottom, rgb(253, 197, 51), #ffffff);
+  background-attachment: fixed; /* Keeps the background fixed */
+  background-size: cover; /* Ensures the background covers the entire viewport */
+  background-position: center; /* Centers the background */
+  margin: 0;
+}
+.div1 {
+  width: 847px;
+  height: auto; /* Height will adjust to content */
+  background-color: #ffffff;
+  margin: 0 auto; /* Center the div horizontally */
+  /* display: flex; */
+  /* justify-content: ; Ensure div3 aligns properly inside div1 */
+  align-items: stretch; /* Make div1 and div3 the same height */
+}
+legend {
+  padding: 20px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ff8000;
+}
+
+.div2 {
+  width: 400px;
+  height: 180px;
+  margin: 0 auto;
+}
+
+.div3 {
+  border: 1px solid black;
+  width: 146px;
+  min-height: 500px;
+  background-color: #dfdfdf;
+  display: flex; /* Use Flexbox */
+  flex-direction: column; /* Arrange layout vertically */
+  justify-content: flex-start; /* Align items at the top */
+  align-items: flex-start; /* Align items to the left */
+}
+
+.div3 p {
+  margin: 0; /* ลบระยะขอบรอบข้อความ */
+  padding: 0; /* ลบ padding ถ้ามี */
+}
+
+.div4 {
+  border: 2px solid #b3d1ff;
+  border-radius: 10px;
+  width: fit-content;
+  height: fit-content;
+  margin-left: 210px;
+  margin-top: 70px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  background-color: #efefef;
+}
+
+a {
+  color: white;
+  text-decoration: none; /* Use 'text-decoration' instead of 'text-underline' */
+}
+
+h1 {
+  color: white;
+  font-size: 15px;
+  text-align: left;
+  margin-left: 15px;
+  margin-top: 10px;
+}
+
+form {
+  margin: 20px;
+}
+
+button {
+  background-color: #c8c8c8;
+  color: #000000;
+  padding: 10px 20px;
+  cursor: pointer;
+  height: 25px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #b3d1ff;
+}
+
+button:hover {
+  background-color: #efefef;
+}
+
+.button2 {
+  font-family: "Comic Sans MS", serif;
+  background-color: #ffffff;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 15px;
+  border: solid black;
+  margin-left: 10px;
+}
+
+.headboard2,
+.headboard {
+  height: 75px;
+  background-color: #434343;
+  width: 960px;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.buttom {
+  padding: 0 20px;
+  height: 20px;
+  width: 960px;
+  background-color: #3a3a3a;
+}
+
+.headboard {
+  background-color: #3a3a3a;
+}
+
+.container {
+  margin: 0 auto;
+  width: 994px; /* Fixed width */
+  box-sizing: border-box;
+}
+
+.grid-container {
+  border: 3px solid #d1d1d1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Fixed three equal columns */
+  width: fit-content;
+}
+.menu1 {
+  background-color: #434343;
+  width: 100%;
+  height: 25px;
+  align-items: center;
+}
+.menu1 p {
+  margin-left: 10px;
+  color: white;
+}
+.menu2 {
+  display: inline-block;
+  background-color: #efefef;
+  align-items: center;
+  width: 100%;
+  height: 25px;
+  transition: background-color 0s ease;
+}
+.menu2 a {
+  margin-left: 10px;
+  color: #434343;
+  display: block; /* ทำให้ลิงก์เต็มพื้นที่ที่กำหนด */
+  text-decoration: none; /* ลบขีดเส้นใต้ลิงก์ */
+}
+
+.menu2:hover:hover {
+  background-color: #434343; /* สีพื้นหลังเมื่อเอาเมาส์ไปชี้ */
+}
+.menu2:hover a {
+  color: white; /* สีข้อความเมื่อ hover */
+}
+
+.pic {
+  width: 1000px; /* กำหนดความกว้าง */
+  height: 80px; /* กำหนดความสูง */
+  background-image: url("https://reg.msu.ac.th/registrar/style/HeadderTive.jpg"); /* ตั้งรูปภาพเป็นพื้นหลัง */
+  background-size: cover; /* ทำให้รูปภาพครอบคลุมพื้นที่ div */
+  background-position: center; /* จัดตำแหน่งรูปภาพให้อยู่กลาง */
+  background-repeat: no-repeat; /* ป้องกันการทำซ้ำของรูป */
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  height: fit-content;
+  margin: 20px auto;
+  width: fit-content;
+  max-width: 500px;
+  background-color: #fff;
+  border: 2px solid #b3d1ff;
+  border-radius: 8px;
+}
+
+ul dl {
+  padding: 4px;
+  border-bottom: 3px solid #eee;
+}
+
+ul dl:last-child {
+  border-bottom: none;
+}
+ul div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+strong {
+  color: #000000;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+dl img {
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}

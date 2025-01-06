@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Result</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+    <link rel="icon" href="/static/msulogo.png" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="pic"></div>
+      <div class="headboard"></div>
+      <div class="headboard2">
+        <h1>
+          <i class="test"><a href="/">ผลการตรวจสอบ</a></i>
+        </h1>
+      </div>
+      <div class="grid-container">
+        <div class="div3">
+          <div class="menu1">
+            <p>Prediction</p>
+          </div>
+          <div class="menu2">
+            <a href="/">Go Back</a>
+          </div>
+          <br />
+        </div>
+        <div class="div1">
+          <legend>ผลการตรวจสอบ</legend>
+          <ul>
+            <div>
+              <dl>
+                <img
+                  src="{{ results['uploaded_image'] }}"
+                  alt="Uploaded Image"
+                  style="max-width: 100px; max-height: 100%; margin: 20px"
+                />
+              </dl>
+            </div>
+            <dl><strong>ขอบรูป:</strong> {{ results['Edge'] }}</dl>
+            <dl><strong>เสื้อ:</strong> {{ results['shirt'] }}</dl>
+            <dl><strong>หน้า:</strong> {{ results['face'] }}</dl>
+            <dl><strong>พื้นหลัง:</strong> {{ results['background'] }}</dl>
+            <dl><strong>สีเสื้อ:</strong> {{ results['shirt_color'] }}</dl>
+            <dl><strong>เน็กไท:</strong> {{ results['tie'] }}</dl>
+            <dl><strong>ผลการตรวจ:</strong> {{ results['status'] }}</dl>
+          </ul>
+        </div>
+      </div>
+      <div class="buttom"></div>
+    </div>
+  </body>
+</html>
