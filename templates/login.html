@@ -41,14 +41,20 @@
               <div>
                 <br />
 
-                <input name="username" required />
+                <!-- Label for the first username input -->
+                <label for="username">รหัสประจำตัว</label>
+                <input id="username" name="username" type="text" required />
                 <br /><br />
-                <input name="username" required />
-                <button style="margin-top: 15px" type="submit">ตรวจสอบ</button>
-                <div id="loading">Processing...</div>
-                <div id="errorMessage">
-                  An error occurred. Please try again.
-                </div>
+
+                <!-- Label for the second username input -->
+                <label for="password">รหัสผ่าน</label>
+                <input id="password" name="password" type="password" required />
+                <br /><br />
+
+                <!-- Submit button -->
+                <button style="margin-top: 15px" type="submit">
+                  <a href="/">ตรวจสอบ</a>
+                </button>
               </div>
             </form>
           </div>
