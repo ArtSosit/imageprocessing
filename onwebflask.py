@@ -228,6 +228,9 @@ def analyze_image(image: Image.Image, image_bgr: np.ndarray, tie_transform: tran
 def index():
     return render_template("index.html")
 
+@app.route("/login/",methods=["GET"])
+def login():
+    return render_template("login.html")
 
 @app.route("/predict/", methods=["POST"])
 def predict_image():

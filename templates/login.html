@@ -25,48 +25,25 @@
       <div class="pic"></div>
       <div class="headboard"></div>
       <div class="headboard2">
-        <h1><i>ตรวจสอบรูปภาพ</i></h1>
+        <h1><i>ลงชื่อเข้าใช้</i></h1>
       </div>
       <div class="grid-container">
         <div class="div3">
           <div class="menu1">
             <p><i>เมนูหลัก</i></p>
-            <div class="menu2">
-              <a href="/login/">กลับ </a>
-            </div>
+            <div class="menu2"></div>
           </div>
         </div>
         <div class="div1">
-          <legend>อัพโหลดรูปภาพ</legend>
+          <legend>ลงชื่อเข้าใช้</legend>
           <div class="div4">
             <form id="uploadForm" method="post" enctype="multipart/form-data">
               <div>
                 <br />
-                <input
-                  type="file"
-                  name="file"
-                  accept=".jpg"
-                  required
-                  onchange="previewImage(event)"
-                />
+
+                <input name="username" required />
                 <br /><br />
-                <input
-                  type="radio"
-                  id="option1"
-                  name="analysis_option"
-                  value="1"
-                  checked
-                  onchange="updateAction()"
-                />
-                <label for="option1">ไทย</label><br />
-                <input
-                  type="radio"
-                  id="option2"
-                  name="analysis_option"
-                  value="2"
-                  onchange="updateAction()"
-                />
-                <label for="option2">ต่างชาติ</label><br />
+                <input name="username" required />
                 <button style="margin-top: 15px" type="submit">ตรวจสอบ</button>
                 <div id="loading">Processing...</div>
                 <div id="errorMessage">
