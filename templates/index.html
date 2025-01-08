@@ -4,21 +4,6 @@
     <title>Index</title>
     <link rel="stylesheet" href="/static/styles.css" />
     <link rel="icon" href="/static/msulogo.png" type="image/x-icon" />
-    <style>
-      #loading {
-        display: none;
-        font-size: 1.2em;
-        color: #007bff;
-        text-align: center;
-        margin-top: 20px;
-      }
-      #errorMessage {
-        display: none;
-        color: red;
-        text-align: center;
-        margin-top: 20px;
-      }
-    </style>
   </head>
   <body>
     <div class="container">
@@ -32,7 +17,7 @@
           <div class="menu1">
             <p><i>เมนูหลัก</i></p>
             <div class="menu2">
-              <a href="/login/">กลับ </a>
+              <a href="/">กลับ </a>
             </div>
           </div>
         </div>
@@ -68,10 +53,6 @@
                 />
                 <label for="option2">ต่างชาติ</label><br />
                 <button style="margin-top: 15px" type="submit">ตรวจสอบ</button>
-                <div id="loading">Processing...</div>
-                <div id="errorMessage">
-                  An error occurred. Please try again.
-                </div>
               </div>
             </form>
           </div>
@@ -90,37 +71,6 @@
           analysisType.value = "2";
         }
       }
-
-      // Add loading state and error handling
-      const form = document.getElementById("uploadForm");
-      const loading = document.getElementById("loading");
-      const errorMessage = document.getElementById("errorMessage");
-
-      form.addEventListener("submit", async (event) => {
-        event.preventDefault(); // Prevent default form submission
-        loading.style.display = "block";
-        errorMessage.style.display = "none";
-
-        try {
-          const formData = new FormData(form);
-          const response = await fetch(form.action, {
-            method: "POST",
-            body: formData,
-          });
-
-          if (!response.ok) {
-            throw new Error("Server error");
-          }
-
-          // Handle successful response (e.g., redirect or show a success message)
-          alert("Upload successful!");
-        } catch (error) {
-          errorMessage.style.display = "block";
-        } finally {
-          loading.style.display = "none";
-        }
-      });
-
       // Initialize the form action based on the default selection
       updateAction();
     </script>

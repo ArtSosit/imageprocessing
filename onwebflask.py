@@ -228,9 +228,6 @@ def analyze_image(image: Image.Image, image_bgr: np.ndarray, tie_transform: tran
 def index():
     return render_template("index.html")
 
-@app.route("/login/",methods=["GET"])
-def login():
-    return render_template("login.html")
 
 @app.route("/predict/", methods=["POST"])
 def predict_image():
@@ -276,5 +273,4 @@ tie_transform = transforms.Compose([
 ])
 
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 10000)) 
-    app.run(host="0.0.0.0", port=port, debug=True)
+    app.run(debug=True)
