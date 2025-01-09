@@ -2,3 +2,5 @@
 .venv.example
 .venv.local
 .venv.staging
+images/*
+!images/.gitkeep
