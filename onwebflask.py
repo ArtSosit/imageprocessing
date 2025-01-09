@@ -1,3 +1,4 @@
+
 import io
 import os
 import cv2
@@ -8,6 +9,7 @@ import traceback
 import numpy as np
 import torchvision
 from PIL import Image
+from datetime import datetime
 from torchvision import transforms
 from flask import Flask, render_template, request, jsonify
 from torchvision.models.detection import  fasterrcnn_mobilenet_v3_large_fpn
@@ -219,6 +221,11 @@ def analyze_image(image: Image.Image, image_bgr: np.ndarray, tie_transform: tran
         results["status"] = "รูปภาพไม่ผ่านเกณฑ์"
     else:
         results["status"] = "รูปภาพผ่านเกณฑ์"
+        output_path = "output_passed_images/"
+        os.makedirs(output_path, exist_ok=True)  # Ensure the directory exists
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        file_name = f"{output_path}passed_image_{timestamp}.jpg"
+        image.save(file_name, format="JPEG")
 
     return results
 
