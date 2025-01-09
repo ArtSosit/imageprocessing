@@ -4,3 +4,4 @@
 .venv.staging
 images/*
 !images/.gitkeep
+.vscode
