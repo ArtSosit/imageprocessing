@@ -222,8 +222,9 @@ def analyze_image(image: Image.Image, image_bgr: np.ndarray, tie_transform: tran
     else:
         results["status"] = "รูปภาพผ่านเกณฑ์"
         
+        # บันทึกรูปที่ผ่านเกณฑ์
         output_path = "output_passed_images/"
-        os.makedirs(output_path, exist_ok=True)  # Ensure the directory exists
+        os.makedirs(output_path, exist_ok=True)  
         timestamp = datetime.now().strftime("%d%m%Y_%H%M%S")
         file_name = f"{output_path}passed_image_{timestamp}.jpg"
         image.save(file_name, format="JPEG")
